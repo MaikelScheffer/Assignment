@@ -3,6 +3,7 @@ import App from './App.vue';
 
 import Buefy from 'buefy';
 import 'buefy/dist/buefy.css';
+import '@fortawesome/fontawesome-free/js/all.js';
 
 import './style/main.scss';
 import router from './router';
