@@ -1,7 +1,11 @@
 @import './variables';
 
 .custom__navbar {
+  color: $font-navbar-colour;
   background-color: $main-colour;
+
+  display: flex;
+  align-items: center;
 
   .navbar-brand {
     img {
