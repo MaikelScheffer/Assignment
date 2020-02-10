@@ -16,6 +16,8 @@ module.exports = {
       }
     ],
     'vue/singleline-html-element-content-newline': 'off',
-    'vue/multiline-html-element-content-newline': 'off'
+    'vue/multiline-html-element-content-newline': 'off',
+    'vue/html-self-closing': 'any',
+    'space-before-function-paren': 0
   }
 };
