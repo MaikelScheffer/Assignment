@@ -7,11 +7,5 @@ import order from './order.module';
 Vue.use(Vuex);
 
 export default new Vuex.Store({
-  state: {
-    customer: {},
-    orders: {}
-  },
-  mutations: {},
-  actions: {},
   modules: { customer, order }
 });

@@ -1,5 +1,5 @@
 <template>
-  <div>LastOrderComponent</div>
+  <div class="box">LastOrderComponent Order Goes Here</div>
 </template>
 
 <script>

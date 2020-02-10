@@ -15,7 +15,7 @@
             <br />Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit amet massa fringilla egestas. Nullam condimentum luctus turpis.
           </p>
         </div>
-        <nav class="level is-mobile">
+        <!-- <nav class="level is-mobile">
           <div class="level-left">
             <a class="level-item" aria-label="reply">
               <span class="icon is-small">
@@ -33,19 +33,22 @@
               </span>
             </a>
           </div>
-        </nav>
+        </nav>-->
       </div>
     </article>
   </div>
 </template>
 
 <script>
+import { mapGetters } from 'vuex';
+
 export default {
   name: 'CustomerInformation',
+  props: {
+    customer: { type: Object, required: true }
+  },
   computed: {
-    count() {
-      return this.$store.state.customer;
-    }
+    ...mapGetters(['customer'])
   }
 };
 </script>
