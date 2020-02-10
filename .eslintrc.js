@@ -19,5 +19,11 @@ module.exports = {
     'vue/multiline-html-element-content-newline': 'off',
     'vue/html-self-closing': 'any',
     'space-before-function-paren': 0
+  },
+  parser: 'vue-eslint-parser',
+  parserOptions: {
+    parser: 'babel-eslint',
+    ecmaVersion: 8,
+    sourceType: 'module'
   }
 };
