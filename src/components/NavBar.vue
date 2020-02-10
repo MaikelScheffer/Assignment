@@ -7,12 +7,19 @@
         </a>
       </div>
 
-      <div class="navbar-end">
+      <div class="navbar-end custom__navbar__navbar-end">
         <div class="navbar-item has-dropdown is-hoverable">
-          <a class="navbar-link"></a>
+          <a class="navbar-link">
+            <i class="fas fa-globe"></i>
+          </a>
 
           <div class="navbar-dropdown">
-            <a v-for="lang in languages" :key="lang.flag" class="navbar-item">{{ lang.title }}</a>
+            <a
+              v-for="lang in languages"
+              :key="lang.flag"
+              class="navbar-item"
+              :click="changeLocale(lang.language)"
+            >{{ lang.title }}</a>
           </div>
         </div>
       </div>
@@ -23,6 +30,11 @@
 <script>
 export default {
   name: 'NavBar',
-  props: { languages: { type: Array, required: true } }
+  props: { languages: { type: Array, required: true } },
+  methods: {
+    changeLocale(locale) {
+      this.$root.$i18n.locale = locale;
+    }
+  }
 };
 </script>

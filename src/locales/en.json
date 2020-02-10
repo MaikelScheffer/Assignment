@@ -1,5 +1,5 @@
 {
-  "pendingOrder_OrderInProgressMessage": "Your order is on its way!",
   "orderDetail__DeliveredAt": "Delivered to",
-  "orderDetail__DeliveredOn": "Delivered on"
+  "orderDetail__DeliveredOn": "Delivered on",
+  "pendingOrder_OrderInProgressMessage": "Your order is on its way!"
 }

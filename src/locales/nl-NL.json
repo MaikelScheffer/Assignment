@@ -1,3 +1,5 @@
 {
-  "message": "Goedemiddag"
+  "pendingOrder_OrderInProgressMessage": "Uw bestelling is onderweg!",
+  "orderDetail__DeliveredAt": "Afgeleverd bij",
+  "orderDetail__DeliveredOn": "Op"
 }
