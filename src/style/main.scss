@@ -1,1 +1,15 @@
+// https://sass-guidelin.es/
+// http://getbem.com/introduction/
+
 @import '_variables';
+
+@import '_navbar.scss';
+
+body,
+html {
+  background-color: $background-colour;
+}
+
+* {
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+}
