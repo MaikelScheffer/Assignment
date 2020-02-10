@@ -1,9 +1,9 @@
 <template>
-  <div>LastOrderComponent</div>
+  <div>CustomerInformation</div>
 </template>
 
 <script>
 export default {
-  name: 'LastOrderComponent'
+  name: 'CustomerInformation'
 };
 </script>

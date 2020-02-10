@@ -1,3 +1,10 @@
-$mainColour: #939393;
-$accentColour: #939393;
-$accentVariation: darken($accentColour, 20%);
+$font-colour: #fff;
+$main-colour: #ff8000;
+
+$accent-colour: #0953bd;
+$accent-colour-border: darken($accent-colour, 20%);
+
+$footer-colour: #0a3847;
+
+// Bulma overrides
+$primary: $main-colour;

@@ -1,10 +1,11 @@
 <template>
-  <div>OrderDetailPage</div>
+  <div class="home">
+    <i class="fas fa-home"></i>
+  </div>
 </template>
 
 <script>
 export default {
-  name: 'OrderDetailPage'
+  name: 'OrderDetails'
 };
 </script>
-
