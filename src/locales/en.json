@@ -1,3 +1,5 @@
 {
-  "message": "Good afternoon"
+  "pendingOrder_OrderInProgressMessage": "Your order is on its way!",
+  "orderDetail__DeliveredAt": "Delivered to",
+  "orderDetail__DeliveredOn": "Delivered on"
 }

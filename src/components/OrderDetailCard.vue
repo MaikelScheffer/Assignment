@@ -7,9 +7,9 @@
     </div>
     <div class="custom__order-detail-card__details">
       <strong>{{ order.restaurantName }}</strong>
-      Afgeleverd bij {{ order.deliveryAddress }}
+      {{ $t('orderDetail__DeliveredAt') }} {{ order.deliveryAddress }}
       <br />
-      Op {{ order.orderTime }}
+      {{ $t('orderDetail__DeliveredOn') }} {{ order.orderTime }}
     </div>
 
     <div class="custom__order-detail-card__price">{{ currency }} {{ order.orderTotal }}</div>

@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <NavBar />
+    <NavBar :languages="languages" />
 
     <div class="container">
       <div class="columns">
@@ -23,6 +23,14 @@ export default {
   components: {
     NavBar,
     PendingOrderStatus
+  },
+  data() {
+    return {
+      languages: [
+        { flag: 'uk', language: 'en', title: 'English', currency: '£' },
+        { flag: 'nl', language: 'nl-NL', title: 'Nederlands', currency: '€' }
+      ]
+    };
   }
 };
 </script>
