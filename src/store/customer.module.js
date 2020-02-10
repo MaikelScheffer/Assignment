@@ -29,6 +29,7 @@ export const state = { ...initialState };
 export const actions = {
   async [FETCH_CUSTOMER_INFORMATION](context, orderId) {
     const { data } = await customerService.getCustomerInformation(orderId);
+    // Not including a personal mapper on the client side in this case
     context.commit(SET_CUSTOMER_INFORMATION, data);
     return data;
   }

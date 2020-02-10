@@ -1,13 +1,8 @@
 <template>
   <div class="custom__order-overview">
     <div class="columns">
-      <div class="column">
-        <PendingOrderStatus />
-      </div>
-    </div>
-    <div class="columns">
       <div class="column is-three-quarters">
-        <LastOrdersComponent />
+        <LastOrdersComponent :orders="orderHistory" />
       </div>
       <div class="column">
         <CustomerInformation />
@@ -20,7 +15,8 @@
 // @ is an alias to /src
 import CustomerInformation from '@/components/CustomerInformation.vue';
 import LastOrdersComponent from '@/components/LastOrdersComponent.vue';
-import PendingOrderStatus from '@/components/PendingOrderStatus.vue';
+
+import { mapGetters } from 'vuex';
 
 import store from '@/store';
 
@@ -33,11 +29,10 @@ export default {
   name: 'OrderOverview',
   components: {
     CustomerInformation,
-    LastOrdersComponent,
-    PendingOrderStatus
+    LastOrdersComponent
   },
   beforeRouteEnter(to, from, next) {
-    var randomUserId = '1231231';
+    var randomUserId = 'there-are-no-real-user-ids';
 
     Promise.all([
       store.dispatch(FETCH_CUSTOMER_INFORMATION, randomUserId),
@@ -45,6 +40,9 @@ export default {
     ]).then(() => {
       next();
     });
+  },
+  computed: {
+    ...mapGetters(['orderHistory'])
   }
 };
 </script>

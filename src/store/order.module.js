@@ -7,8 +7,17 @@ import {
 } from './actions';
 
 const initialState = {
-  order: {},
-  orderHistory: {}
+  order: {
+    orderTime: '',
+    restaurantName: '',
+    orderTotal: '',
+    deliveryAddress: '',
+    status: ''
+  },
+  orderHistory: {
+    customerId: 0,
+    last5Orders: []
+  }
 };
 
 export const state = { ...initialState };
@@ -16,11 +25,13 @@ export const state = { ...initialState };
 export const actions = {
   async [FETCH_ORDER_DETAILS](context, orderId) {
     const { data } = await orderService.getOrderDetails(orderId);
+    // Not including a personal mapper on the client side in this case
     context.commit(SET_ORDER_DETAILS, data);
     return data;
   },
   async [FETCH_RECENT_ORDER_HISTORY](context, userId) {
     const { data } = await orderService.getRecentOrderHistory(userId);
+    // Not including a personal mapper on the client side in this case
     context.commit(SET_RECENT_ORDER_HISTORY, data);
     return data;
   }
@@ -40,7 +51,12 @@ const getters = {
     return state.order;
   },
   orderHistory(state) {
-    return state.orderHistory;
+    return Object.values(state.orderHistory.last5Orders);
+  },
+  pendingOrders(state) {
+    return Object.values(state.orderHistory.last5Orders).filter(
+      x => x.status.toLowerCase() === 'in transit'
+    );
   }
 };
 
