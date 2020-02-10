@@ -4,6 +4,6 @@
   },
   "order-detail-card": {
     "delivered-at": "Afgeleverd bij",
-    "delivered-on": "Op"
+    "ordered-on": "Besteld op"
   }
 }

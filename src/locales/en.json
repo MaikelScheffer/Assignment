@@ -4,6 +4,6 @@
   },
   "order-detail-card": {
     "delivered-at": "Delivered to",
-    "delivered-on": "Delivered on"
+    "ordered-on": "Ordered on"
   }
 }

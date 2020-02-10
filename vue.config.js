@@ -5,8 +5,8 @@ module.exports = {
 
   pluginOptions: {
     i18n: {
-      locale: 'en',
-      fallbackLocale: 'nl',
+      locale: 'nl',
+      fallbackLocale: 'en',
       localeDir: 'locales',
       enableInSFC: false
     }

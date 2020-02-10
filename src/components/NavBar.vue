@@ -18,7 +18,7 @@
               v-for="lang in languages"
               :key="lang.flag"
               class="navbar-item"
-              :click="changeLocale(lang.language)"
+              @click="changeLocale(lang.language)"
             >{{ lang.title }}</a>
           </div>
         </div>
@@ -33,6 +33,8 @@ export default {
   props: { languages: { type: Array, required: true } },
   methods: {
     changeLocale(locale) {
+      console.log(locale);
+
       this.$root.$i18n.locale = locale;
     }
   }

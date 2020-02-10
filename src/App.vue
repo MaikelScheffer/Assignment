@@ -31,6 +31,11 @@ export default {
         { flag: 'nl', language: 'nl-NL', title: 'Nederlands', currency: '€' }
       ]
     };
+  },
+
+  beforeCreate() {
+    const language = window.navigator.userLanguage || window.navigator.language;
+    this.$root.$i18n.locale = language;
   }
 };
 </script>
