@@ -1,5 +1,9 @@
 {
-  "orderDetail__DeliveredAt": "Delivered to",
-  "orderDetail__DeliveredOn": "Delivered on",
-  "pendingOrder_OrderInProgressMessage": "Your order is on its way!"
+  "pending-order-status": {
+    "in-progress-message": "Your order from {restaurantName} is on its way!"
+  },
+  "order-detail-card": {
+    "delivered-at": "Delivered to",
+    "delivered-on": "Delivered on"
+  }
 }

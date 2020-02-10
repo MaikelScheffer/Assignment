@@ -1,5 +1,9 @@
 {
-  "pendingOrder_OrderInProgressMessage": "Uw bestelling is onderweg!",
-  "orderDetail__DeliveredAt": "Afgeleverd bij",
-  "orderDetail__DeliveredOn": "Op"
+  "pending-order-status": {
+    "in-progress-message": "Uw bestelling van {restaurantName} is onderweg"
+  },
+  "order-detail-card": {
+    "delivered-at": "Afgeleverd bij",
+    "delivered-on": "Op"
+  }
 }

@@ -4,7 +4,8 @@
       <span class="icon">
         <i class="fas fa-shipping-fast"></i>
       </span>
-      <p>De bestelling van {{ recentOrder.restaurantName }} is onderweg</p>
+
+      <p>{{ $t('pending-order-status.in-progress-message', { restaurantName: recentOrder.restaurantName }) }}</p>
     </div>
   </div>
 </template>
