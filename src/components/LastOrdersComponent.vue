@@ -1,7 +1,7 @@
 <template>
   <div class="custom__order-history">
-    <div v-for="order in orders" v-bind:key="order.id" class="custom__order-history__item">
-      <OrderDetailCard order></OrderDetailCard>
+    <div v-for="order in orders" :key="order.key" class="custom__order-history__item">
+      <OrderDetailCard :order="order"></OrderDetailCard>
     </div>
   </div>
 </template>
@@ -13,7 +13,7 @@ export default {
   name: 'LastOrderComponent',
   components: { OrderDetailCard },
   props: {
-    orders: []
+    orders: { type: Object, required: true }
   }
 };
 </script>

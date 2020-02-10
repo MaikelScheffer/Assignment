@@ -11,6 +11,8 @@
 <script>
 export default {
   name: 'OrderDetailCard',
-  props: ['order']
+  props: {
+    order: { type: Object, required: true }
+  }
 };
 </script>

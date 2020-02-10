@@ -51,7 +51,7 @@ const getters = {
     return state.order;
   },
   orderHistory(state) {
-    return Object.values(state.orderHistory.last5Orders);
+    return state.orderHistory.last5Orders;
   },
   pendingOrders(state) {
     return Object.values(state.orderHistory.last5Orders).filter(
