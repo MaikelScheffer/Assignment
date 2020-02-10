@@ -44,9 +44,6 @@ import { mapGetters } from 'vuex';
 
 export default {
   name: 'CustomerInformation',
-  props: {
-    customer: { type: Object, required: true }
-  },
   computed: {
     ...mapGetters(['customer'])
   }
