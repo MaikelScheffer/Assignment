@@ -2,4 +2,10 @@
 
 .custom__navbar {
   background-color: $main-colour;
+
+  .navbar-brand {
+    img {
+      width: 150px;
+    }
+  }
 }

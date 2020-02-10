@@ -3,7 +3,7 @@
     <div class="container">
       <div class="navbar-brand">
         <a class="navbar-item" href="https://www.thuisbezorgd.nl/">
-          <img src="../assets/logo.svg" width="112" height="28" />
+          <img src="../assets/logo.svg" />
         </a>
       </div>
     </div>
