@@ -1,10 +1,18 @@
 <template>
-  <div class="box">
-    {{ order.deliveryAddress }}
-    {{ order.orderTime }}
-    {{ order.orderTotal }}
-    {{ order.restaurantName }}
-    {{ order.status }}
+  <div class="box custom__order-detail-card">
+    <div class="custom__order-detail-card__icon">
+      <i
+        v-bind:class="[ order.status.toLowerCase() === 'in transit' ? 'fas fa-truck' : 'fas fa-check-circle' ]"
+      ></i>
+    </div>
+    <div class="custom__order-detail-card__details">
+      <strong>{{ order.restaurantName }}</strong>
+      Afgeleverd bij {{ order.deliveryAddress }}
+      <br />
+      Op {{ order.orderTime }}
+    </div>
+
+    <div class="custom__order-detail-card__price">{{ currency }} {{ order.orderTotal }}</div>
   </div>
 </template>
 
@@ -12,7 +20,8 @@
 export default {
   name: 'OrderDetailCard',
   props: {
-    order: { type: Object, required: true }
+    order: { type: Object, required: true },
+    currency: { type: String, required: false, default: '€' }
   }
 };
 </script>

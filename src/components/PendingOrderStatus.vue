@@ -1,11 +1,10 @@
 <template>
   <div v-if="pendingOrders.length > 0">
     <div class="notification is-info is-light custom__pending-order-status">
-      <!-- <button class="delete" :click="hideNotification()"></button> -->
       <span class="icon">
-        <i class="fas fa-truck"></i>
+        <i class="fas fa-shipping-fast"></i>
       </span>
-      <p>Uw bestelling van {{ recentOrder.restaurantName }} is onderweg!</p>
+      <p>De bestelling van {{ recentOrder.restaurantName }} is onderweg</p>
     </div>
   </div>
 </template>
@@ -15,19 +14,11 @@ import { mapGetters } from 'vuex';
 
 export default {
   name: 'PendingOrderStatus',
-  data: () => {
-    return {
-      showNotification: true
-    };
-  },
   computed: {
     recentOrder() {
       return this.pendingOrders[0];
     },
     ...mapGetters(['pendingOrders'])
   }
-  // methods: {
-  //   hideNotification: () => (this.data.state.showNotification = false)
-  // }
 };
 </script>
