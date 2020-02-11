@@ -16,9 +16,6 @@ export default {
   components: { OrderDetailCard },
   props: {
     orders: { type: Object, required: true }
-  },
-  created() {
-    console.log(this.orders);
   }
 };
 </script>

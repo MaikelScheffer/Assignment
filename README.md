@@ -7,6 +7,17 @@ npm install
 npm run serve
 ```
 
+## TODO
+
+- Responsive
+- Unit tests
+- Make the change language button nicer
+- Inject variables into component styling
+- Include proper effects on user action like hover / focus (pending order / detail card)
+- Turn the LastOrders component into a paramterized vue plugin (order number max 5, min 2)
+- Optional: Allow customer to change user data and make a mock request to (mockbin.org/request)
+- Perhaps expand on load success / fail and include retry logic and error handling though that might be overkill
+
 #### Uitleg keuzes
 
 Er zijn een aantal dingen die ik anders heb gedaan dan normaliter, grotendeels door de schaal van het project.

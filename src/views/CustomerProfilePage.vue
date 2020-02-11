@@ -30,7 +30,7 @@ export default {
     CustomerInformation
   },
   beforeRouteEnter(to, from, next) {
-    var randomUserId = 'there-are-no-real-user-ids';
+    var randomUserId = '123';
 
     Promise.all([
       store.dispatch(FETCH_CUSTOMER_INFORMATION, randomUserId),
