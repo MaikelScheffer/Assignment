@@ -14,12 +14,12 @@ const routes = [
       {
         path: '/orders',
         name: 'order-overview',
-        component: () => import('@/views/OrderOverviewPage')
+        component: () => import('@/views/sub-views/OrderOverviewPage')
       },
       {
         path: '/orders/:orderId',
         name: 'order-detail',
-        component: () => import('@/views/OrderDetailPage')
+        component: () => import('@/views/sub-views/OrderDetailPage')
       },
       { path: '/', redirect: { name: 'order-overview' } }
     ]
