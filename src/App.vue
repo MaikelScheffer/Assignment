@@ -5,7 +5,7 @@
     <div class="container">
       <div class="columns">
         <div class="column">
-          <PendingOrderStatus />
+          <PendingOrderStatus :order="recentOrder" orderId="A123" />
         </div>
       </div>
       <router-view />
@@ -17,6 +17,7 @@
 // @ is an alias to /src
 import NavBar from '@/components/NavBar.vue';
 import PendingOrderStatus from '@/components/PendingOrderStatus.vue';
+import { mapGetters } from 'vuex';
 
 export default {
   name: 'App',
@@ -32,7 +33,12 @@ export default {
       ]
     };
   },
-
+  computed: {
+    recentOrder() {
+      return this.pendingOrders[0];
+    },
+    ...mapGetters(['pendingOrders'])
+  },
   mounted() {
     setLanguageToBrowserDefault(this);
     setFakeCustomerIdForDemoPurposes(this);
