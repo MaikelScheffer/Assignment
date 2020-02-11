@@ -1,18 +1,19 @@
 // https://sass-guidelin.es/
 // http://getbem.com/introduction/
 
-@import '_variables';
+@import './abstracts/_variables.scss';
+@import './base/_typography.scss';
 
-@import '_navbar.scss';
-@import '_order-history.scss';
-@import '_pending-order-status.scss';
-@import '_order-detail-card.scss';
+@import './components/_navbar.scss';
+@import './components/_order-history.scss';
+@import './components/_pending-order-status.scss';
+@import './components/_order-detail-card.scss';
+
+@import './views/_order-overview.scss';
 
 body,
 html {
   background-color: $background-colour;
-}
-
-* {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  padding: 0;
+  margin: 0;
 }
