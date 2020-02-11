@@ -2,7 +2,7 @@
   <nav class="navbar custom__navbar" role="navigation" aria-label="main navigation">
     <div class="container">
       <div class="navbar-brand">
-        <a class="navbar-item" href="https://www.thuisbezorgd.nl/">
+        <a class="navbar-item" href="/">
           <img src="../assets/logo.svg" />
         </a>
       </div>

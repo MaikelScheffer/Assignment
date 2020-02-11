@@ -1,20 +1,27 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
-import OrderOverviewPage from '../views/OrderOverviewPage.vue';
+import CustomerProfilePage from '../views/CustomerProfilePage.vue';
 
 Vue.use(VueRouter);
 
 const routes = [
+  // hard redirect to a customer for demo purposes
+  { path: '/', redirect: '/profile/123' },
   {
-    path: '/',
-    name: 'orders',
-    component: OrderOverviewPage,
+    path: '/profile/:userId',
+    component: CustomerProfilePage,
     children: [
       {
-        path: ':id',
-        name: 'orderDetail',
-        component: () => import('../views/OrderDetailPage.vue')
-      }
+        path: '/orders',
+        name: 'order-overview',
+        component: () => import('@/views/OrderOverviewPage')
+      },
+      {
+        path: '/orders/:orderId',
+        name: 'order-detail',
+        component: () => import('@/views/OrderDetailPage')
+      },
+      { path: '/', redirect: { name: 'order-overview' } }
     ]
   }
 ];

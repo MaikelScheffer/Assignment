@@ -22,12 +22,10 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex';
-
 export default {
   name: 'CustomerInformation',
-  computed: {
-    ...mapGetters(['customer'])
+  props: {
+    customer: { type: Object, required: true }
   }
 };
 </script>

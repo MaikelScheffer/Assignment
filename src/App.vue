@@ -33,9 +33,18 @@ export default {
     };
   },
 
-  beforeCreate() {
-    const language = window.navigator.userLanguage || window.navigator.language;
-    this.$root.$i18n.locale = language;
+  mounted() {
+    setLanguageToBrowserDefault(this);
+    setFakeCustomerIdForDemoPurposes(this);
   }
 };
+
+function setLanguageToBrowserDefault(x) {
+  const language = window.navigator.userLanguage || window.navigator.language;
+  x.$root.$i18n.locale = language;
+}
+
+function setFakeCustomerIdForDemoPurposes(x) {
+  // x.$router.push({ name: 'profile', params: { userId: '123' } });
+}
 </script>
