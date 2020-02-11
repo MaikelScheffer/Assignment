@@ -2,7 +2,7 @@
   <div class="box custom__order-detail-card">
     <div class="custom__order-detail-card__icon">
       <i
-        v-bind:class="[ order.status.toLowerCase() === 'in transit' ? 'fas fa-truck' : 'fas fa-check-circle' ]"
+        :class="[ order.status.toLowerCase() === 'in transit' ? 'fas fa-truck' : 'fas fa-check-circle' ]"
       ></i>
     </div>
     <div class="custom__order-detail-card__details">

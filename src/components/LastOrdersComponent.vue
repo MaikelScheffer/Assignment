@@ -1,7 +1,9 @@
 <template>
   <div class="custom__order-history">
-    <div v-for="order in orders" :key="order.key" class="custom__order-history__item">
-      <OrderDetailCard :order="order"></OrderDetailCard>
+    <div v-for="(item, key) in orders" :key="key" class="custom__order-history__item">
+      <router-link :to="{ path: `orders/${key}` }">
+        <OrderDetailCard :order="item"></OrderDetailCard>
+      </router-link>
     </div>
   </div>
 </template>
@@ -14,6 +16,9 @@ export default {
   components: { OrderDetailCard },
   props: {
     orders: { type: Object, required: true }
+  },
+  created() {
+    console.log(this.orders);
   }
 };
 </script>
