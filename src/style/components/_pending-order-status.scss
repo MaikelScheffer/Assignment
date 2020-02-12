@@ -1,8 +1,17 @@
+@import '../abstracts/_variables.scss';
+
 .custom__pending-order-status {
   display: flex;
   align-items: center;
+  transition: $transition;
 
   .icon {
     margin-right: 1rem;
+  }
+
+  &:hover,
+  &:focus {
+    box-shadow: $shadow;
+    cursor: pointer;
   }
 }

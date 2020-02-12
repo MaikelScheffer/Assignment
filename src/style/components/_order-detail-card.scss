@@ -1,7 +1,9 @@
+@import '../abstracts/_variables.scss';
+
 .custom__order-detail-card {
   display: flex;
   align-items: center;
-  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition: $transition;
 
   .custom__order-detail-card__icon {
     margin: 0 2rem 0 1rem;
@@ -16,8 +18,9 @@
     flex-direction: column;
   }
 
-  &:hover {
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25), 0 6px 6px rgba(0, 0, 0, 0.22);
+  &:hover,
+  &:focus {
+    box-shadow: $shadow;
     cursor: pointer;
   }
 }
