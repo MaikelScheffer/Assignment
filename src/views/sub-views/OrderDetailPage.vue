@@ -1,6 +1,6 @@
 <template>
-  <div class="home">
-    <i class="fas fa-home"></i>
+  <div class="custom__order-detail-page">
+    <LastOrdersComponent :orders="orderHistory" />
   </div>
 </template>
 

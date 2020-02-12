@@ -1,4 +1,6 @@
 $font-navbar-colour: #fff;
+$font-navbar-colour--hover: #000;
+
 $font-colour: #fff;
 
 $background-colour: #f7f7f7;
@@ -11,3 +13,4 @@ $footer-colour: #2b2b2b;
 
 // Bulma overrides
 $primary: $main-colour;
+$link-visited: $accent-colour;

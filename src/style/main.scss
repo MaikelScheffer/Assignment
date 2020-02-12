@@ -1,15 +1,21 @@
 // https://sass-guidelin.es/
 // http://getbem.com/introduction/
+// glob imports are an options
 
+// global / misc
 @import './abstracts/_variables.scss';
 @import './base/_typography.scss';
 
+// components
 @import './components/_navbar.scss';
 @import './components/_order-history.scss';
 @import './components/_pending-order-status.scss';
 @import './components/_order-detail-card.scss';
 
-@import './views/_order-overview.scss';
+// views
+@import './views/_order-overview-page.scss';
+@import './views/_order-detail-page.scss';
+@import './views/_customer-profile-page.scss';
 
 body,
 html {

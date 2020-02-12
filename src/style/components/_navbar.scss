@@ -12,5 +12,11 @@
       width: 150px;
     }
   }
+
+  .navbar-link {
+    &:hover {
+      color: $font-navbar-colour--hover;
+    }
+  }
   margin-bottom: 2rem;
 }

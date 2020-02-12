@@ -9,7 +9,7 @@
 
       <div class="navbar-end custom__navbar__navbar-end">
         <div class="navbar-item has-dropdown is-hoverable">
-          <a class="navbar-link">
+          <a class="navbar-link is-arrowless">
             <i class="fas fa-globe"></i>
           </a>
 

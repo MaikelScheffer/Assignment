@@ -1,5 +1,7 @@
 <template>
-  <LastOrdersComponent :orders="orderHistory" />
+  <div class="custom__order-overview-page">
+    <LastOrdersComponent :orders="orderHistory" />
+  </div>
 </template>
 
 <script>
