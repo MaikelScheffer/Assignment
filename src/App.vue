@@ -5,7 +5,10 @@
     <div class="container">
       <div class="columns">
         <div class="column">
-          <PendingOrderStatus :order="recentOrder" orderId="A123" />
+          <PendingOrderStatus
+            :restaurantName="pendingOrder.restaurantName"
+            :orderId="pendingOrder.orderId"
+          />
         </div>
       </div>
       <router-view />
@@ -34,10 +37,7 @@ export default {
     };
   },
   computed: {
-    recentOrder() {
-      return this.pendingOrders[0];
-    },
-    ...mapGetters(['pendingOrders'])
+    ...mapGetters(['pendingOrder'])
   },
   mounted() {
     setLanguageToBrowserDefault(this);

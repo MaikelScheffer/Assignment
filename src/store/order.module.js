@@ -53,10 +53,19 @@ const getters = {
   orderHistory(state) {
     return state.orderHistory.last5Orders;
   },
-  pendingOrders(state) {
-    return Object.values(state.orderHistory.last5Orders).filter(
-      x => x.status.toLowerCase() === 'in transit'
-    );
+  pendingOrder(state) {
+    const pendingItems = Object.entries(state.orderHistory.last5Orders)
+      .filter(([key, value]) => value.status.toLowerCase() === 'in transit')
+      .map(([key, value]) => {
+        return { orderId: key, restaurantName: value.restaurantName };
+      });
+
+    const basic = {
+      restaurantName: '',
+      orderId: ''
+    };
+
+    return pendingItems?.[0] ?? basic;
   }
 };
 
