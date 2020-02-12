@@ -54,7 +54,7 @@
                 <td>
                   <strong>Order total</strong>
                 </td>
-                <td class="has-text-right">{{ order.orderTotal }}</td>
+                <td class="has-text-right">{{ selectedLanguage.currency }} {{ order.orderTotal }}</td>
               </tr>
             </tfoot>
 
@@ -71,12 +71,14 @@
                     >{{ product.productDescription }}</div>
                   </div>
                 </td>
-                <td class="has-text-right">{{ product.pricePerUnitWithTax }}</td>
+                <td
+                  class="has-text-right"
+                >{{ selectedLanguage.currency }} {{ product.pricePerUnitWithTax }}</td>
               </tr>
               <tr>
                 <td class="has-text-centered">1</td>
                 <td>Delivery costs</td>
-                <td class="has-text-right">{{ order.deliveryCosts }}</td>
+                <td class="has-text-right">{{ selectedLanguage.currency }} {{ order.deliveryCosts }}</td>
               </tr>
             </tbody>
           </table>
@@ -138,7 +140,7 @@ export default {
     }
   },
   computed: {
-    ...mapGetters(['order'])
+    ...mapGetters(['order', 'selectedLanguage'])
   }
 };
 </script>

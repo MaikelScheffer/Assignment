@@ -1,6 +1,6 @@
 <template>
   <div class="custom__order-overview-page">
-    <LastOrdersComponent :orders="orderHistory" />
+    <LastOrdersComponent :orders="orderHistory" :currency="selectedLanguage.currency" />
   </div>
 </template>
 
@@ -16,7 +16,7 @@ export default {
     LastOrdersComponent
   },
   computed: {
-    ...mapGetters(['orderHistory', 'customer'])
+    ...mapGetters(['orderHistory', 'customer', 'selectedLanguage'])
   }
 };
 </script>
