@@ -1,2 +1,20 @@
 .custom__order-detail-page {
+  .custom__order-detail-page__order {
+    .custom__order-detail-page__order__banner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 1rem;
+
+      .custom__order-detail-page__order__banner__restaurant {
+        font-weight: bold;
+      }
+
+      .custom__order-detail-page__order__banner__end__total {
+        display: flex;
+        flex-direction: row;
+        flex-grow: 1;
+      }
+    }
+  }
 }

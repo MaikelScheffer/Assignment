@@ -2,13 +2,22 @@
   <div class="custom__order-detail-page">
     <div class="box">
       <div class="custom__order-detail-page__order">
+        <div class="custom__order-detail-page__order__banner">
+          <div
+            class="custom__order-detail-page__order__banner__restaurant"
+          >{{ order.orderTime | formatDate }} | {{ order.restaurantName }}</div>
+          <div class="custom__order-detail-page__order__banner__end">
+            <div
+              class="custom__order-detail-page__order__banner__end__status"
+            >{{ order.status.currentStatus }}</div>
+          </div>
+        </div>
         {{ order.deliveryAddress }}
         {{ order.deliveryCosts }}
         {{ order.orderReference }}
         {{ order.orderTime }}
         {{ order.orderTotal }}
         {{ order.paymentMethod }}
-        {{ order.restaurantName }}
         <div class="custom__order-detail-page__order__rows__product">
           <div
             v-for="(product, index) in order.products"
@@ -40,6 +49,7 @@
 
 <script>
 import store from '@/store';
+import moment from 'moment';
 import { mapGetters } from 'vuex';
 import { FETCH_ORDER_DETAILS, SET_ORDER_DETAILS } from '@/store/actions';
 
@@ -54,6 +64,11 @@ export default {
     ]).then(() => {
       next();
     });
+  },
+  filters: {
+    formatDate: function(date) {
+      return moment(date).format('LL');
+    }
   },
   computed: {
     ...mapGetters(['order'])

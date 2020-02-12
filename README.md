@@ -12,6 +12,8 @@ npm run serve
 - Customer info box is having oddly in tablet / mobile mode. Caused by something in the CSS framework.
   Possibly make it a fold-out on the side on mobile/tablet instead. Or hide completely.
 - Unit tests
+- REMINDER INCLUDE TRANSLATIONS
+- Perhaps include a "Order Status" component
 - Display all details for the "Order details" page
 - Optional: Turn the LastOrders component into a parameterized vue plugin (order number max 5, min 2)
 - Optional: Allow customer to change user data and make a mock request to (mockbin.org/request)
