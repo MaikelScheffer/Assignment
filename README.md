@@ -9,7 +9,7 @@ npm run serve
 
 ## TODO
 
-- Responsive
+- Customer info box is having oddly in tablet / mobile mode. Caused by something in the CSS framework.
 - Unit tests
 - Display all details for the "Order details" page
 - Include proper effects on user action like hover / focus (pending order / detail card)
