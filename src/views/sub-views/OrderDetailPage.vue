@@ -19,10 +19,6 @@
             {{ order.deliveryAddress }}
           </div>
           <!-- // dd / dt? -->
-          <div>
-            <span>Delivery costs:</span>
-            {{ order.deliveryCosts }}
-          </div>
 
           <div>
             <span>Reference:</span>
@@ -31,10 +27,6 @@
           <div>
             <span>Date:</span>
             {{ order.orderTime }}
-          </div>
-          <div>
-            <span>Order total:</span>
-            {{ order.orderTotal }}
           </div>
 
           <div>
@@ -51,24 +43,24 @@
           <table class="table is-fullwidth is-hoverable">
             <thead>
               <tr>
-                <th>Amount</th>
+                <th class="has-text-centered">Amount</th>
                 <th>Description</th>
-                <th>Price</th>
+                <th class="has-text-right">Price</th>
               </tr>
             </thead>
             <tfoot>
               <tr>
-                <td>-</td>
+                <td class="has-text-centered">-</td>
                 <td>
                   <strong>Order total</strong>
                 </td>
-                <td>{{ order.orderTotal }}</td>
+                <td class="has-text-right">{{ order.orderTotal }}</td>
               </tr>
             </tfoot>
 
             <tbody>
               <tr v-for="(product, index) in order.products" :key="index">
-                <td>{{ product.amount }}</td>
+                <td class="has-text-centered">{{ product.amount }}</td>
                 <td>
                   <div class="custom__order-detail-page__order__rows__product__information">
                     <div
@@ -79,12 +71,12 @@
                     >{{ product.productDescription }}</div>
                   </div>
                 </td>
-                <td>{{ product.pricePerUnitWithTax }}</td>
+                <td class="has-text-right">{{ product.pricePerUnitWithTax }}</td>
               </tr>
               <tr>
-                <td>1</td>
+                <td class="has-text-centered">1</td>
                 <td>Delivery costs</td>
-                <td>{{ order.deliveryCosts }}</td>
+                <td class="has-text-right">{{ order.deliveryCosts }}</td>
               </tr>
             </tbody>
           </table>

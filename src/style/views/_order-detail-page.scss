@@ -19,16 +19,25 @@
       }
     }
 
+    .custom__order-detail-page__order__information {
+      margin-bottom: 3rem;
+
+      span {
+        font-weight: bold;
+      }
+    }
+
     .custom__order-detail-page__order__rows {
-      margin-top: 1rem;
       display: flex;
       flex-direction: column;
+      margin-bottom: 3rem;
 
       .custom__order-detail-page__order__rows__banner {
         background-color: $main-colour;
         padding: 1rem;
         width: 100%;
         margin-bottom: 1rem;
+        border-radius: $border-radius;
 
         span {
           color: white;
@@ -70,6 +79,7 @@
         padding: 1rem;
         width: 100%;
         margin-bottom: 1rem;
+        border-radius: $border-radius;
 
         span {
           color: white;
