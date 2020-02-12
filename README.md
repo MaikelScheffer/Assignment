@@ -32,6 +32,10 @@ itself kinda suffers from immense amounts of boilerplate. One fetch() could end 
 - CALL_FINALIZE
 
 I felt that kind of level of error handling was excessive considering the nature of this project, so I've largely foregone it.
+I'd only really use it if I were to include "view state" as in validation / 'loading' booleans and such in a store module partial.
+In such cases **every** view update change would pass through the store using mutations.
+Which can be exactly what you'd like to do, but as mentioned I've forgone it in this case.
+
 Nevertheless, I have included some actions to showcase my general familiarty with the "one-way data flow" concept.
 
 I try to adhere to the "Smart views" / "Dumb components" seperation
