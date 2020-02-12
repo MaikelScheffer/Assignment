@@ -12,12 +12,22 @@
             >{{ order.status.currentStatus }}</div>
           </div>
         </div>
-        {{ order.deliveryAddress }}
-        {{ order.deliveryCosts }}
-        {{ order.orderReference }}
-        {{ order.orderTime }}
-        {{ order.orderTotal }}
-        {{ order.paymentMethod }}
+
+        <div class="custom__order-detail-page__order__information"></div>
+        <div>
+          <span>Address:</span>
+          {{ order.deliveryAddress }}
+        </div>
+        <!-- // dd / dt? -->
+        <div>{{ order.deliveryCosts }}</div>
+
+        <div>{{ order.orderReference }}</div>
+        <div>{{ order.orderTime }}</div>
+        <div>{{ order.orderTotal }}</div>
+
+        <div>{{ order.paymentMethod }}</div>
+
+        <!-- Make this a table -->
         <div class="custom__order-detail-page__order__rows__product">
           <div
             v-for="(product, index) in order.products"
@@ -31,8 +41,11 @@
           </div>
         </div>
 
+        <!-- Make this a table -->
         <div class="custom__order-detail-page__order__status">
-          {{ order.status.currentStatus }}
+          <span>
+            <strong>Status history</strong>
+          </span>
           <div
             v-for="(update, index) in order.status.history"
             :key="index"
