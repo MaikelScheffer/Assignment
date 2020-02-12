@@ -9,6 +9,7 @@ npm run serve
 
 ## TODO
 
+- Error handling on REST calls and null checks
 - Customer info box is having oddly in tablet / mobile mode. Caused by something in the CSS framework.
   Possibly make it a fold-out on the side on mobile/tablet instead. Or hide completely.
 - Unit tests
