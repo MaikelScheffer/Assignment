@@ -28,7 +28,7 @@ public async Task<IActionResult> AddChapter(string storyId, AddChapterRequest re
     };
 
     // upon completion, the domain model will throw the event
-    var chapterResult = await _mediator.Send(command);
+    Result<Chapter> chapterResult = await _mediator.Send(command);
 
     if (chapterResult.IsFailure) return FromResult(chapterResult);
 
@@ -87,13 +87,13 @@ public class AddChapterCommandHandler : ICommandHandler<AddChapter, Chapter?>
         // into two loose commands that should be made by a overhanging service 
         // However, since I do not use this specific command elsewhere 
         // I decided to favour YAGNI. I probably wouldn't do this in a group project
-        var bannerPathResult = await _mediator.Send(new UploadImage(request.BannerImage));
+        Result<string> bannerPathResult = await _mediator.Send(new UploadImage(request.BannerImage));
 
         // if this result is clear that means the bussiness logic validated
         // and processed the received data. If something was wrong either of 
         // these will fail and the data will not be saved to the database
         // and the validation messages will be returned
-        var result = Result.Combine(chapterResult, bannerPathResult);
+        Result<Chapter> result = Result.Combine(chapterResult, bannerPathResult);
 
         if (result.IsFailure) return result.ConvertFailure<Chapter?>();
 
