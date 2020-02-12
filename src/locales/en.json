@@ -8,6 +8,7 @@
   },
   "order-detail-page": {
     "address": "Address",
+    "delivery-costs": "Delivery costs",
     "reference": "Reference",
     "date": "Date",
     "order": "Order",
@@ -18,6 +19,5 @@
     "order-total": "Order total",
     "state-history": "State history",
     "state": "State",
-    "in-transit": "In transit"
   }
 }
