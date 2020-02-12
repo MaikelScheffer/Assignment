@@ -104,6 +104,13 @@ public class AddChapterCommandHandler : ICommandHandler<AddChapter, Chapter?>
         _context.Add(chapterResult.Value);
 
         // database retries are handled by the wrapping decorator
+        // This special commit method actually is responsible
+        // for orchestating the entire domain events transmissions
+        // if it completes succesfully, the domain events prepared by
+        // the domain model will be broadcast. 
+        // This ensure we don't incorrectly transmit domain events
+        // ahead of time when the database call might fail on us
+        // See: https://lostechies.com/jimmybogard/2014/05/13/a-better-domain-events-pattern/
         await _context.Commit(cancellationToken);
 
         return Result.Ok(chapterResult.Value);
