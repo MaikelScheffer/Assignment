@@ -3,9 +3,6 @@
 // Request object shape (contract)
 public class AddChapterRequest
 {
-    [Required]
-    public string StoryId { get; set; }
-
     [Required, MaxLength(200)]
     public string Name { get; set; }
 
@@ -21,8 +18,9 @@ public class AddChapterRequest
 [HttpPost("{storyId:guid}/entries")]
 public async Task<IActionResult> AddChapter(string storyId, AddChapterRequest request)
 {
+    // Bad requests implicity return any model validation errors
     if (ModelState.IsValid == false) return BadRequest();
-    if (storyId != request.StoryId) return BadRequest();
+    if (storyId == string.Empty) return BadRequest();
 
     var command = new AddChapter(request.StoryId, request.Name, request.Content)
     {
