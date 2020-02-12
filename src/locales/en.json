@@ -5,5 +5,19 @@
   "order-detail-card": {
     "delivered-at": "Delivered to",
     "ordered-on": "Ordered on"
+  },
+  "order-detail-page": {
+    "address": "Address",
+    "reference": "Reference",
+    "date": "Date",
+    "order": "Order",
+    "amount": "Amount",
+    "description": "Description",
+    "payment-method": "Payment method",
+    "price": "Price",
+    "order-total": "Order total",
+    "state-history": "State history",
+    "state": "State",
+    "in-transit": "In transit"
   }
 }

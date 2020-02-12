@@ -7,52 +7,56 @@
             class="custom__order-detail-page__order__banner__restaurant"
           >{{ order.orderTime | formatDate }} | {{ order.restaurantName }}</div>
           <div class="custom__order-detail-page__order__banner__end">
-            <div
-              class="custom__order-detail-page__order__banner__end__status"
-            >{{ order.status.currentStatus }}</div>
+            <div class="custom__order-detail-page__order__banner__end__status">
+              <i
+                class="is-size-4"
+                :title="[ order.status.currentStatus.toLowerCase() === 'in transit' ? 'Onderweg' : 'Afgeleverd' ]"
+                :class="[ order.status.currentStatus.toLowerCase() === 'in transit' ? 'fas fa-truck' : 'fas fa-check-circle' ]"
+              ></i>
+            </div>
           </div>
         </div>
 
         <div class="custom__order-detail-page__order__information">
           <div>
-            <span>Address:</span>
+            <span>{{ $t('order-detail-page.address') }}:</span>
             {{ order.deliveryAddress }}
           </div>
           <!-- // dd / dt? -->
 
           <div>
-            <span>Reference:</span>
+            <span>{{ $t('order-detail-page.reference') }}:</span>
             {{ order.orderReference }}
           </div>
           <div>
-            <span>Date:</span>
+            <span>{{ $t('order-detail-page.date') }}:</span>
             {{ order.orderTime }}
           </div>
 
           <div>
-            <span>Payment method:</span>
+            <span>{{ $t('order-detail-page.payment-method') }}:</span>
             {{ order.paymentMethod }}
           </div>
         </div>
         <!-- Make this a table -->
         <div class="custom__order-detail-page__order__rows">
           <div class="custom__order-detail-page__order__rows__banner">
-            <span>Bestelling</span>
+            <span>{{ $t('order-detail-page.order') }}</span>
           </div>
 
           <table class="table is-fullwidth is-hoverable">
             <thead>
               <tr>
-                <th class="has-text-centered">Amount</th>
-                <th>Description</th>
-                <th class="has-text-right">Price</th>
+                <th class="has-text-centered">{{ $t('order-detail-page.amount') }}</th>
+                <th>{{ $t('order-detail-page.description') }}</th>
+                <th class="has-text-right">{{ $t('order-detail-page.price') }}</th>
               </tr>
             </thead>
             <tfoot>
               <tr>
                 <td class="has-text-centered">-</td>
                 <td>
-                  <strong>Order total</strong>
+                  <strong>{{ $t('order-detail-page.order-total') }}</strong>
                 </td>
                 <td class="has-text-right">{{ selectedLanguage.currency }} {{ order.orderTotal }}</td>
               </tr>
@@ -77,7 +81,7 @@
               </tr>
               <tr>
                 <td class="has-text-centered">1</td>
-                <td>Delivery costs</td>
+                <td>{{ $t('order-detail-page.order') }}</td>
                 <td class="has-text-right">{{ selectedLanguage.currency }} {{ order.deliveryCosts }}</td>
               </tr>
             </tbody>
@@ -87,14 +91,14 @@
         <!-- Make this a table -->
         <div class="custom__order-detail-page__order__status">
           <div class="custom__order-detail-page__order__status__banner">
-            <span>Status history</span>
+            <span>{{ $t('order-detail-page.state-history') }}</span>
           </div>
 
           <table class="table is-fullwidth is-hoverable is-striped">
             <thead>
               <tr>
-                <th>Date</th>
-                <th>Status</th>
+                <th>{{ $t('order-detail-page.date') }}</th>
+                <th>{{ $t('order-detail-page.state') }}</th>
               </tr>
             </thead>
 

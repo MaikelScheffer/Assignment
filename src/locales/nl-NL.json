@@ -5,5 +5,19 @@
   "order-detail-card": {
     "delivered-at": "Afgeleverd bij",
     "ordered-on": "Besteld op"
+  },
+  "order-detail-page": {
+    "address": "Adres",
+    "reference": "Referentie",
+    "date": "Datum",
+    "order": "Bestelling",
+    "amount": "Aantal",
+    "description": "Beschrijving",
+    "payment-method": "Betaalmethode",
+    "price": "Prijs",
+    "order-total": "Totaal kosten",
+    "state-history": "Status historie",
+    "state": "Status",
+    "in-transit": "In behandling"
   }
 }
