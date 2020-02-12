@@ -1,15 +1,18 @@
-$font-navbar-colour: #fff;
-$font-navbar-colour--hover: #000;
-
 $font-colour: #fff;
-
 $background-colour: #f7f7f7;
+
+$white: #fff;
 
 $main-colour: #ff8000;
 $accent-colour: #0953bd;
 $accent-colour-border: darken($accent-colour, 20%);
 
-$footer-colour: #2b2b2b;
+$footer-background-colour: #2b2b2b;
+
+$navbar-font-colour: #fff;
+$navbar-font-colour--hover: #000;
+$navbar-margin-bottom: 2rem;
+$navbar-background-color: $main-colour;
 
 // Bulma overrides
 $primary: $main-colour;

@@ -1,8 +1,8 @@
 @import '../abstracts/variables.scss';
 
 .custom__navbar {
-  color: $font-navbar-colour;
-  background-color: $main-colour;
+  color: $navbar-font-colour;
+  background-color: $navbar-background-color;
 
   display: flex;
   align-items: center;
@@ -14,9 +14,11 @@
   }
 
   .navbar-link {
-    &:hover {
-      color: $font-navbar-colour--hover;
+    transition: 0.1s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+    &:hover,
+    &:focus {
+      color: $navbar-font-colour--hover;
     }
   }
-  margin-bottom: 2rem;
+  margin-bottom: $navbar-margin-bottom;
 }
