@@ -18,6 +18,8 @@ npm run serve
 - Optional: Turn the LastOrders component into a parameterized vue plugin (order number max 5, min 2)
 - Optional: Allow customer to change user data and make a mock request to (mockbin.org/request)
 - Loading indicators while application is getting store values?
+- Include temp caching when making calls?
+- Make sure the currency symbol changes on language change
 
 #### Regarding my choices
 

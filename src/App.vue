@@ -21,6 +21,8 @@
 import NavBar from '@/components/NavBar.vue';
 import PendingOrderStatus from '@/components/PendingOrderStatus.vue';
 import { mapGetters } from 'vuex';
+import store from '@/store';
+import { TRY_CHANGE_LANGUAGE } from '@/store/actions';
 
 export default {
   name: 'App',
@@ -28,29 +30,12 @@ export default {
     NavBar,
     PendingOrderStatus
   },
-  data() {
-    return {
-      languages: [
-        { flag: 'uk', language: 'en', title: 'English', currency: '£' },
-        { flag: 'nl', language: 'nl-NL', title: 'Nederlands', currency: '€' }
-      ]
-    };
-  },
   computed: {
-    ...mapGetters(['pendingOrder'])
+    ...mapGetters(['pendingOrder', 'languages'])
   },
-  mounted() {
-    setLanguageToBrowserDefault(this);
-    setFakeCustomerIdForDemoPurposes(this);
+  async mounted() {
+    const language = window.navigator.userLanguage || window.navigator.language;
+    await store.dispatch(TRY_CHANGE_LANGUAGE, language);
   }
 };
-
-function setLanguageToBrowserDefault(x) {
-  const language = window.navigator.userLanguage || window.navigator.language;
-  x.$root.$i18n.locale = language;
-}
-
-function setFakeCustomerIdForDemoPurposes(x) {
-  // x.$router.push({ name: 'profile', params: { userId: '123' } });
-}
 </script>

@@ -28,14 +28,15 @@
 </template>
 
 <script>
+import store from '@/store';
+import { TRY_CHANGE_LANGUAGE } from '@/store/actions';
+
 export default {
   name: 'NavBar',
   props: { languages: { type: Array, required: true } },
   methods: {
-    changeLocale(locale) {
-      console.log(locale);
-
-      this.$root.$i18n.locale = locale;
+    async changeLocale(locale) {
+      await store.dispatch(TRY_CHANGE_LANGUAGE, locale);
     }
   }
 };
