@@ -55,7 +55,7 @@
             <tfoot>
               <tr>
                 <td class="has-text-centered">-</td>
-                <td>
+                <td class="has-text-right">
                   <strong>{{ $t('order-detail-page.order-total') }}</strong>
                 </td>
                 <td class="has-text-right">{{ selectedLanguage.currency }} {{ order.orderTotal }}</td>
@@ -81,7 +81,7 @@
               </tr>
               <tr>
                 <td class="has-text-centered">1</td>
-                <td>{{ $t('order-detail-page.order') }}</td>
+                <td>{{ $t('order-detail-page.delivery-costs') }}</td>
                 <td class="has-text-right">{{ selectedLanguage.currency }} {{ order.deliveryCosts }}</td>
               </tr>
             </tbody>
